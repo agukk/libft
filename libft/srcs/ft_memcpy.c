@@ -6,11 +6,11 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 09:31:33 by kentakato         #+#    #+#             */
-/*   Updated: 2024/04/23 09:20:34 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/04/27 19:58:49 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "../includes/libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 07:47:31 by kentakato         #+#    #+#             */
-/*   Updated: 2024/04/23 07:34:34 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/04/27 19:58:20 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include "../includes/libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

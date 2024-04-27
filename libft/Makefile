@@ -11,7 +11,8 @@ SOURCES = srcs/ft_isalnum.c \
 		  srcs/ft_strlen.c \
 		  srcs/ft_bzero.c \
 		  srcs/ft_memcpy.c \
-		  srcs/ft_memmove.c 
+		  srcs/ft_memmove.c \
+		  srcs/
 OBJECTS = $(SOURCES:.c=.o)
 RM = rm -f
 
