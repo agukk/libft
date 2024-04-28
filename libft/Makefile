@@ -12,7 +12,10 @@ SOURCES = srcs/ft_isalnum.c \
 		  srcs/ft_bzero.c \
 		  srcs/ft_memcpy.c \
 		  srcs/ft_memmove.c \
-		  srcs/
+		  srcs/ft_strlcpy.c \
+		  srcs/ft_strlcat.c \
+		  srcs/ft_toupper.c \
+		  srcs/ft_tolower.c
 OBJECTS = $(SOURCES:.c=.o)
 RM = rm -f
 
