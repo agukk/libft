@@ -15,7 +15,12 @@ SOURCES = srcs/ft_isalnum.c \
 		  srcs/ft_strlcpy.c \
 		  srcs/ft_strlcat.c \
 		  srcs/ft_toupper.c \
-		  srcs/ft_tolower.c
+		  srcs/ft_tolower.c \
+		  srcs/ft_strchr.c \
+		  srcs/ft_strrchr.c \
+		  srcs/ft_strncmp.c \
+		  srcs/ft_memchr.c \
+		  srcs/ft_memcmp.c
 OBJECTS = $(SOURCES:.c=.o)
 RM = rm -f
 
@@ -33,5 +38,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-# $(OBJECTS): $(SOURCES)
-# 	$(CC) $(CFLAGS) -c $< -o $@
