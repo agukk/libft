@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/09 15:46:24 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/03 08:44:16 by kentakato        ###   ########.fr       */
+/*   Created: 2024/05/03 11:07:15 by kentakato         #+#    #+#             */
+/*   Updated: 2024/05/03 13:01:44 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_isalnum(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	void *ptr;
+
+	if (count * size > SIZE_T_MAX)
+		return (NULL);
+	ptr = (void *)malloc(size * count);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-//     printf("%d\n", ft_isalnum('/'));
-// }
