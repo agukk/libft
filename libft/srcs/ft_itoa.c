@@ -6,13 +6,13 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 18:43:41 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/04 19:45:59 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/04 21:11:03 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-size_t	intlen(int n)
+static size_t	intlen(int n)
 {
 	size_t	len;
 	long	num;
