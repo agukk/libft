@@ -28,7 +28,8 @@ SOURCES = srcs/ft_isalnum.c \
 		  srcs/ft_substr.c \
 		  srcs/ft_strjoin.c \
 		  srcs/ft_strtrim.c \
-		  srcs/ft_split.c
+		  srcs/ft_split.c \
+		  srcs/ft_itoa.c
 OBJECTS = $(SOURCES:.c=.o)
 RM = rm -f
 
