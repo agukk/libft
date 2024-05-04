@@ -31,7 +31,8 @@ SOURCES = srcs/ft_isalnum.c \
 		  srcs/ft_split.c \
 		  srcs/ft_itoa.c \
 		  srcs/ft_strmapi.c \
-		  srcs/ft_striteri.c
+		  srcs/ft_striteri.c \
+		  srcs/ft_putchar_fd.c
 OBJECTS = $(SOURCES:.c=.o)
 RM = rm -f
 
