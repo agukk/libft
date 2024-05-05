@@ -1,8 +1,8 @@
 CC = cc
-INCLUDE = includes
-CFLAGS = -Wall -Wextra -Werror -I $(INCLUDE)
+INCLUDES = includes
+CFLAGS = -Wall -Wextra -Werror -I $(INCLUDES)
 NAME = libft.a
-SOURCES = srcs/ft_isalnum.c \
+M_SOURCES = srcs/ft_isalnum.c \
 		  srcs/ft_isalpha.c \
 		  srcs/ft_isdigit.c \
 		  srcs/ft_memset.c \
@@ -36,7 +36,11 @@ SOURCES = srcs/ft_isalnum.c \
 		  srcs/ft_putstr_fd.c \
 		  srcs/ft_putendl_fd.c \
 		  srcs/ft_putnbr_fd.c 
-OBJECTS = $(SOURCES:.c=.o)
+B_SOURCES = srcs/ft_lstnew.c 
+OBJECTS = $(M_SOURCES:.c=.o)
+ifdef WITH_BONUS
+	OBJECTS += $(B_SOURCES:.c=.o)
+endif
 RM = rm -f
 
 $(NAME): $(OBJECTS)
@@ -52,4 +56,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus: 
+	make WITH_BONUS=1
+
+.PHONY: all clean fclean re bonus
