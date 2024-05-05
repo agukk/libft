@@ -12,9 +12,9 @@
 
 #include "../includes/libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if ('A' <= c && c <= 'Z')
-        c += 32;
-    return c;
+	if ('A' <= c && c <= 'Z')
+		c += 32;
+	return (c);
 }

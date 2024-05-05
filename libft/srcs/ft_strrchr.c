@@ -20,19 +20,19 @@
  * ・文字列終了コードの'\0'も文字列の一部と見なす
  */
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    char *str;
-    size_t s_len = ft_strlen(s);
-    str = (char *)s;
-    
-    if (str[s_len] == c)
-        return &str[s_len];
-        
-    while(s_len--)
-    {
-        if (str[s_len] == c)
-            return &str[s_len];
-    }
-    return NULL;
+	char	*str;
+	size_t	s_len;
+
+	s_len = ft_strlen(s);
+	str = (char *)s;
+	if (str[s_len] == c)
+		return (&str[s_len]);
+	while (s_len--)
+	{
+		if (str[s_len] == c)
+			return (&str[s_len]);
+	}
+	return (NULL);
 }

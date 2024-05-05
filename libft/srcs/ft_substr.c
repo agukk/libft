@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-    substr = (char *)ft_calloc(len + 1, sizeof(char));
+	substr = (char *)ft_calloc(len + 1, sizeof(char));
 	if (substr == NULL)
 		return (NULL);
 	ft_strlcpy(substr, &s[start], len + 1);
