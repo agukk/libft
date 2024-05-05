@@ -36,7 +36,8 @@ M_SOURCES = srcs/ft_isalnum.c \
 		  srcs/ft_putstr_fd.c \
 		  srcs/ft_putendl_fd.c \
 		  srcs/ft_putnbr_fd.c 
-B_SOURCES = srcs/ft_lstnew.c 
+B_SOURCES = srcs/ft_lstnew.c \
+			srcs/ft_lstadd_front.c 
 OBJECTS = $(M_SOURCES:.c=.o)
 ifdef WITH_BONUS
 	OBJECTS += $(B_SOURCES:.c=.o)
