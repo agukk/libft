@@ -6,9 +6,11 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 14:50:00 by kentakato         #+#    #+#             */
-/*   Updated: 2024/03/09 15:35:10 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/05 10:22:18 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/libft.h"
 
 int	ft_isalpha(int c)
 {

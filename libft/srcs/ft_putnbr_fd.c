@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 22:51:52 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/04 23:13:18 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/05 10:24:18 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(nbr + '0', fd);
 	}
 }
-

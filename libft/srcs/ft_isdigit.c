@@ -6,9 +6,11 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 15:23:51 by kentakato         #+#    #+#             */
-/*   Updated: 2024/03/09 15:35:14 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/05 10:23:52 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/libft.h"
 
 int	ft_isdigit(int c)
 {
