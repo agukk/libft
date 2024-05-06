@@ -42,7 +42,8 @@ B_SOURCES = srcs/ft_lstnew.c \
 			srcs/ft_lstlast.c \
 			srcs/ft_lstadd_back.c \
 			srcs/ft_lstdelone.c \
-			srcs/ft_lstclear.c
+			srcs/ft_lstclear.c \
+			srcs/ft_lstiter.c
 OBJECTS = $(M_SOURCES:.c=.o)
 ifdef WITH_BONUS
 	OBJECTS += $(B_SOURCES:.c=.o)
