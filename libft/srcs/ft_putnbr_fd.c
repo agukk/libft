@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 22:51:52 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/05 10:24:18 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/06 19:33:36 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	nbr;
+	long long	nbr;
 
 	nbr = n;
 	if (nbr < 0)

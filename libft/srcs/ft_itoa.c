@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 18:43:41 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/04 21:11:03 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/06 19:32:21 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	intlen(int n)
 {
-	size_t	len;
-	long	num;
+	size_t		len;
+	long long	num;
 
 	len = 1;
 	num = n;
@@ -34,9 +34,9 @@ static size_t	intlen(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	long	num;
-	size_t	len;
+	char		*str;
+	long long	num;
+	size_t		len;
 
 	len = intlen(n);
 	num = n;
