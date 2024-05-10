@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 12:17:05 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/05 10:24:26 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/10 20:23:51 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,14 @@ char	*ft_strchr(const char *s, int c)
 		return (str);
 	return (NULL);
 }
+
+// #include <string.h>
+// #include <stdio.h>
+
+// int main()
+// {
+// 	const char s = '\0';
+// 	int c = 0;
+// 	printf("lib: %s\n", strchr(&s, c));
+// 	printf("ft: %s\n", ft_strchr(&s, c));
+// }

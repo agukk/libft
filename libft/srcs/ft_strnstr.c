@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 19:40:58 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/02 12:17:44 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/10 21:12:57 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	needle_len;
 
 	if (haystack == NULL && len == 0)
-	{
 		return (NULL);
-	}
 	needle_len = ft_strlen(needle);
 	while (*haystack != '\0' && needle_len <= len)
 	{
 		if (ft_strncmp(haystack, needle, needle_len) == 0)
-		{
 			return ((char *)haystack);
-		}
 		haystack++;
 		len--;
 	}

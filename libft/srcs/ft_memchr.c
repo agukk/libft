@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:53:15 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/05 10:23:59 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/10 20:57:22 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n--)
 	{
 		if (*str == (unsigned char)c)
-		{
 			return (str);
-		}
 		str++;
 	}
 	return (NULL);

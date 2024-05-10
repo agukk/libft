@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 09:23:29 by kentakato         #+#    #+#             */
-/*   Updated: 2024/04/27 19:59:00 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/08 22:16:02 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (NULL);
 	if (s < d)
 	{
-		// --lenの場合は、lenの値を1つ引いて評価
-		while (len--) // 評価してから、lenの値を1つ引く
+		while (len--)
 			d[len] = s[len];
 	}
 	else
