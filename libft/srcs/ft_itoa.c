@@ -6,13 +6,13 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 18:43:41 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/06 19:32:21 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/11 12:33:26 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static size_t	intlen(int n)
+static size_t	ft_intlen(int n)
 {
 	size_t		len;
 	long long	num;
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 	long long	num;
 	size_t		len;
 
-	len = intlen(n);
+	len = ft_intlen(n);
 	num = n;
 	if (num < 0)
 		num *= -1;

@@ -6,25 +6,36 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:40:15 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/03 10:03:09 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/11 21:32:05 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static int	is_space(char c)
+static int	ft_is_space(char c)
 {
 	return ((c >= 9 && c <= 13) || c == ' ');
 }
 
+static int	ft_is_overflow(long long num, int n, int sign)
+{
+	if (num * sign > LONG_MAX / 10 || (num * sign == LONG_MAX / 10
+			&& n > LONG_MAX % 10))
+		return (1);
+	else if (num * sign < LONG_MIN / 10 || (num * sign == LONG_MIN / 10 && n >
+			-1 * (LONG_MIN % 10)))
+		return (-1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
+	long long	num;
+	int			sign;
 
-	i = 0;
+	num = 0;
 	sign = 1;
-	while (is_space(*str))
+	while (ft_is_space(*str))
 		str++;
 	while (*str == '-' || *str == '+')
 	{
@@ -33,18 +44,24 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	while (ft_isdigit(*str))
-		i = i * 10 + *str++ - '0';
-	return (i * sign);
+	{
+		if (ft_is_overflow(num, *str - '0', sign) == 1)
+			return ((int)LONG_MAX);
+		else if (ft_is_overflow(num, *str - '0', sign) == -1)
+			return ((int)LONG_MIN);
+		num = num * 10 + *str - '0';
+		str++;
+	}
+	return (num * sign);
 }
 
 // #include <stdio.h>
-// #include <stdlib.h>
-// #include <limits.h>
 // #include <string.h>
 
-// int main()
+// int	main(void)
 // {
-//     printf("%lu\n", strlen("9223372036854775808"));
-//     printf("lib : atoi %d\n", atoi("18446744073709551616"));
-//     printf("ft : %d\n", ft_atoi("18446744073709551616"));
+// 	printf("overflow -> lib : %d\n", atoi("-922337203685477580845678"));
+// 	printf("overflow -> ft : %d\n", ft_atoi("-922337203685477580845678"));
+// 	printf("underflow -> lib : %d\n", atoi("922337203685477580845678"));
+// 	printf("underflow -> ft : %d\n", ft_atoi("922337203685477580845678"));
 // }
