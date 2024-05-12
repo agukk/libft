@@ -62,8 +62,7 @@ A library of basic C functions.
 
 ## Usage
 ```
-1. git clone ...
+1. git clone https://github.com/agukk/libft.git
 2. cd libft
 3. make
-4. Compile libft.a with .c files to use the functions.
 ```
