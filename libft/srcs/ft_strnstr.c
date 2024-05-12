@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 19:40:58 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/10 21:12:57 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/12 23:20:37 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	if (haystack == NULL && len == 0)
 		return (NULL);
+	if (*haystack == '\0' && *needle == '\0')
+		return ("");
 	needle_len = ft_strlen(needle);
 	while (*haystack != '\0' && needle_len <= len)
 	{
@@ -40,3 +42,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	printf("ft : %s, lib : %s\n", ft_strnstr("", "", 1), strnstr("", "", 1));
+// }
