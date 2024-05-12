@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:24:31 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/12 13:21:08 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/12 13:29:38 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ static size_t	ft_cnt_str(char *str, char delimiter)
 	cnt = 0;
 	while (str[i] != '\0')
 	{
-		while (str[i] != '\0' && (str[i] == delimiter))
+		while (str[i] != '\0' && str[i] == delimiter)
 			i++;
 		if (str[i] != '\0')
 			cnt++;
-		while (str[i] != '\0' && !(str[i] == delimiter))
+		while (str[i] != '\0' && str[i] != delimiter)
 			i++;
 	}
 	return (cnt);
@@ -39,7 +39,7 @@ static char	*ft_get_splitted_str(char *s, char delimiter)
 
 	i = 0;
 	len = 0;
-	while (!(s[len] == delimiter))
+	while (s[len] != delimiter)
 		len++;
 	str = (char *)ft_calloc(len + 1, sizeof(char));
 	if (str == NULL)
@@ -73,7 +73,7 @@ static char	**ft_allocate_str(char **strs, char *str, char c)
 	i = 0;
 	while (*str != '\0')
 	{
-		while (*str != '\0' && (*str == c))
+		while (*str != '\0' && *str == c)
 			str++;
 		if (*str != '\0')
 		{
@@ -85,7 +85,7 @@ static char	**ft_allocate_str(char **strs, char *str, char c)
 			}
 			i++;
 		}
-		while (*str != '\0' && !(*str == c))
+		while (*str != '\0' && *str != c)
 			str++;
 	}
 	strs[i] = NULL;
