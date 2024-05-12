@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 11:07:15 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/05 10:23:42 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/12 23:51:59 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
-
-	if (count * size > SIZE_T_MAX)
+	
+	if (count > SIZE_MAX / size && size != 0)
 		return (NULL);
 	ptr = (void *)malloc(size * count);
 	if (ptr == NULL)
