@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 12:56:52 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/10 20:35:48 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/12 22:58:06 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ char	*ft_strrchr(const char *s, int c)
 
 	s_len = ft_strlen(s);
 	str = (char *)s;
-	if (str[s_len] == c)
+	if (str[s_len] == (char)c)
 		return (&str[s_len]);
 	while (s_len--)
 	{
-		if (str[s_len] == c)
+		if (str[s_len] == (char)c)
 			return (&str[s_len]);
 	}
 	return (NULL);

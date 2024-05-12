@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 12:17:05 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/10 20:23:51 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/12 22:57:12 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	str = (char *)s;
 	while (*str != '\0')
 	{
-		if (*str == c)
+		if (*str == (char)c)
 			return (str);
 		str++;
 	}
-	if (*str == c)
+	if (*str == (char)c)
 		return (str);
 	return (NULL);
 }
@@ -33,8 +33,9 @@ char	*ft_strchr(const char *s, int c)
 
 // int main()
 // {
-// 	const char s = '\0';
-// 	int c = 0;
-// 	printf("lib: %s\n", strchr(&s, c));
-// 	printf("ft: %s\n", ft_strchr(&s, c));
+// 	const char *s = "libft-test-tokyo";
+// 	printf("ft : %s, lib : %s\n", ft_strchr(s, 'l' + 256), strchr(s, 'l' + 256));
+// 	printf("ft : %s, lib : %s\n", ft_strchr(s, 'i' + 256), strchr(s, 'i' + 256));
+// 	printf("ft : %s, lib : %s\n", ft_strchr(s, 'l' - 256), strchr(s, 'l' - 256));
+// 	printf("ft : %s, lib : %s\n", ft_strchr(s, 'i' - 256), strchr(s, 'i' - 256));
 // }
