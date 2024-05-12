@@ -6,7 +6,7 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:40:15 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/11 21:32:05 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/12 12:38:18 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,6 @@ int	ft_atoi(const char *str)
 // 	printf("overflow -> ft : %d\n", ft_atoi("-922337203685477580845678"));
 // 	printf("underflow -> lib : %d\n", atoi("922337203685477580845678"));
 // 	printf("underflow -> ft : %d\n", ft_atoi("922337203685477580845678"));
+// 	printf("lib : %d\n", atoi("0000000000001"));
+// 	printf("ft : %d\n", ft_atoi("0000000000001"));
 // }

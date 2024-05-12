@@ -6,35 +6,35 @@
 /*   By: kentakato <kentakato@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:24:31 by kentakato         #+#    #+#             */
-/*   Updated: 2024/05/04 11:54:33 by kentakato        ###   ########.fr       */
+/*   Updated: 2024/05/12 13:21:08 by kentakato        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static size_t	cnt_str(char const *s, char delimiter)
+static size_t	ft_cnt_str(char *str, char delimiter)
 {
 	size_t	i;
 	size_t	cnt;
 
 	i = 0;
 	cnt = 0;
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
-		while (s[i] != '\0' && (s[i] == delimiter))
+		while (str[i] != '\0' && (str[i] == delimiter))
 			i++;
-		if (s[i] != '\0')
+		if (str[i] != '\0')
 			cnt++;
-		while (s[i] != '\0' && !(s[i] == delimiter))
+		while (str[i] != '\0' && !(str[i] == delimiter))
 			i++;
 	}
 	return (cnt);
 }
 
-static char	*get_splitted_str(char const *s, char delimiter)
+static char	*ft_get_splitted_str(char *s, char delimiter)
 {
-	size_t	i;
 	char	*str;
+	size_t	i;
 	size_t	len;
 
 	i = 0;
@@ -53,34 +53,59 @@ static char	*get_splitted_str(char const *s, char delimiter)
 	return (str);
 }
 
+static void	ft_free_all(char **strs, size_t index)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < index)
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+}
+
+static char	**ft_allocate_str(char **strs, char *str, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (*str != '\0')
+	{
+		while (*str != '\0' && (*str == c))
+			str++;
+		if (*str != '\0')
+		{
+			strs[i] = ft_get_splitted_str(str, c);
+			if (strs[i] == NULL)
+			{
+				ft_free_all(strs, i);
+				return (NULL);
+			}
+			i++;
+		}
+		while (*str != '\0' && !(*str == c))
+			str++;
+	}
+	strs[i] = NULL;
+	return (strs);
+}
+
 char	**ft_split(char const *s, char c)
 {
+	char	*str;
 	char	**strs;
-	size_t	i;
-	size_t	strs_i;
 	size_t	cnt;
 
 	if (s == NULL)
 		return (NULL);
-	i = 0;
-	strs_i = 0;
-	cnt = cnt_str(s, c);
+	str = (char *)s;
+	cnt = ft_cnt_str(str, c);
 	strs = (char **)ft_calloc(cnt + 1, sizeof(char *));
 	if (strs == NULL)
 		return (NULL);
-	while (s[i] != '\0')
-	{
-		while (s[i] != '\0' && (s[i] == c))
-			i++;
-		if (s[i] != '\0')
-		{
-			strs[strs_i] = get_splitted_str(&s[i], c);
-			strs_i++;
-		}
-		while (s[i] != '\0' && !(s[i] == c))
-			i++;
-	}
-	strs[strs_i] = NULL;
+	strs = ft_allocate_str(strs, str, c);
 	return (strs);
 }
 
